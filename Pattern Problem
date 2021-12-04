@@ -1,0 +1,38 @@
+Que - https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/B
+
+Code 
+#include<bits/stdc++.h>
+using namespace std;
+
+void init_code() {
+#ifndef ONLINE_JUDGE
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+#endif
+}
+
+int main() {
+	init_code();
+	//Write ur code here
+	int n;
+	cin >> n;
+	for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= n; j++) {
+			if (i == j && i + j == n + 1) {
+				cout << "X";
+			}
+			else if (i == j) {
+				cout << char(92);// Double Backslash can also be used to print \ (cout"\\")
+			}
+			else if (i + j == n + 1) {
+				cout << "/";
+			} else {
+				cout << "*";
+			}
+
+		}
+		cout << '\n';
+	}
+
+	return 0;
+}
